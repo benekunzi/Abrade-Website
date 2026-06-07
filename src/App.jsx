@@ -1,10 +1,12 @@
 import styles from './App.module.css'
 
+const base = import.meta.env.BASE_URL
+
 const SCREENSHOTS = [
-  { src: '/screenshots/grid-hello.png',   alt: 'Grid scratch — Hello written on checkered paper' },
-  { src: '/screenshots/grid-colorful.png', alt: 'Grid scratch — bold colorful strokes' },
-  { src: '/screenshots/pixel-image.png',  alt: 'Pixel image mode — reveal a photo by scratching' },
-  { src: '/screenshots/completion.png',   alt: 'Completion screen with time' },
+  { src: `${base}screenshots/grid-hello.png`,    alt: 'Grid scratch — Hello written on checkered paper' },
+  { src: `${base}screenshots/grid-colorful.png`, alt: 'Grid scratch — bold colorful strokes' },
+  { src: `${base}screenshots/pixel-image.png`,   alt: 'Pixel image mode — reveal a photo by scratching' },
+  { src: `${base}screenshots/completion.png`,    alt: 'Completion screen with time' },
 ]
 
 const MODES = [
@@ -41,7 +43,7 @@ export default function App() {
       <section className={styles.hero}>
         <div className={styles.heroGlow} />
         <div className={styles.heroContent}>
-          <img src="/logo.png" alt="Abrade app icon" className={styles.logoImg} />
+          <img src={`${base}logo.png`} alt="Abrade app icon" className={styles.logoImg} />
           <h1 className={styles.appName}>Abrade</h1>
           <p className={styles.tagline}>Mindless fidgeting,<br />satisfying results.</p>
           <p className={styles.subTagline}>
